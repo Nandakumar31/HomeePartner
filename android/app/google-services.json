@@ -1,0 +1,207 @@
+{
+  "project_info": {
+    "project_number": "82774553568",
+    "firebase_url": "https://homee-7b3e9-default-rtdb.firebaseio.com",
+    "project_id": "homee-7b3e9",
+    "storage_bucket": "homee-7b3e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:ecb85cf8cd7a66bb6bb185",
+        "android_client_info": {
+          "package_name": "com.homeeUser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:9a20186b2e28a8826bb185",
+        "android_client_info": {
+          "package_name": "com.homeecook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:d3b8536c5b4902e16bb185",
+        "android_client_info": {
+          "package_name": "com.homeepartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:1a5483a39abfadee6bb185",
+        "android_client_info": {
+          "package_name": "com.homeeuser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-2lb6v33bfes36740gdhgq1jrm07p6esv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homeeuser",
+            "certificate_hash": "40ceff848c3ecd6ed53607bb9e03566bff2c4493"
+          }
+        },
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:fe8c68c8169b5f016bb185",
+        "android_client_info": {
+          "package_name": "com.homeevendor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-u79tmae03ikddo82qhjpfa1uvjiscoto.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.homeevendor",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
