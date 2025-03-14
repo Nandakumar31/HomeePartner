@@ -1,0 +1,93 @@
+import { Alert, PermissionsAndroid, Platform } from "react-native";
+import Geolocation from 'react-native-geolocation-service';
+import { useDispatch } from 'react-redux';
+import { setCurrentLocation } from '../../store/slices/ProfileSlice';
+
+
+export const requestLocationPermission = async () => {
+    try {
+        if (Platform.OS === 'android') {
+            const granted = await PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+                {
+                    title: 'Location Permission',
+                    message: 'App needs access to your location.',
+                    buttonNegative: 'Cancel',
+                    buttonPositive: 'OK',
+                }
+            );
+
+            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                console.log('Location permission granted');
+                return true;
+            } else {
+                console.log('Location permission denied');
+                Alert.alert("Permission Denied", "Location access is required for the app to function properly.");
+                return false;
+            }
+        }
+
+        return true;
+    } catch (error) {
+        console.error("Error requesting location permission:", error);
+        return false;
+    }
+};
+
+
+
+export const handleGetCurrentLocation = async (dispatch: any) => {
+    try {
+        const hasPermission = await requestLocationPermission();
+        console.log("Has Permission:", hasPermission);
+        if (!hasPermission) return;
+
+        console.log('Fetching location...');
+
+        Geolocation.getCurrentPosition(
+            (position) => {
+                if (!position?.coords) {
+                    console.error("No coordinates returned");
+                    return;
+                }
+                const { latitude, longitude } = position.coords;
+                console.log("Location:", latitude, longitude);
+
+                dispatch(setCurrentLocation({ latitude, longitude }));
+            },
+            (error) => {
+                console.error("Location error:", error);
+                Alert.alert("Error", `Failed to get location: ${error.message}`);
+            },
+            {
+                enableHighAccuracy: true, 
+                timeout: Platform.OS === 'android' ? 20000 : 15000, 
+                maximumAge: 5000
+            }
+        );
+    } catch (error) {
+        console.error("Unexpected error while fetching location:", error);
+    }
+};
+
+export const requestCameraPermission = async () => {
+    if (Platform.OS === 'android') {
+        try {
+            const granted = await PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.CAMERA,
+                {
+                    title: 'Camera Permission',
+                    message: 'This app needs access to your camera',
+                    buttonNeutral: 'Ask Me Later',
+                    buttonNegative: 'Cancel',
+                    buttonPositive: 'OK',
+                }
+            );
+            return granted === PermissionsAndroid.RESULTS.GRANTED;
+        } catch (err) {
+            console.warn(err);
+            return false;
+        }
+    }
+    return true; // iOS does not require manual permission handling
+};

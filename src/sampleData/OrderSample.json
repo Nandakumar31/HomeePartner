@@ -1,0 +1,53 @@
+{
+    "order_id": "12345670001",
+    "restaurant": {
+        "name": "Pizza Hub",
+        "address": {
+            "street": "456 Food Street,Ring the bell and leave the package at the door",
+            "city": "Mumbai",
+            "postal_code": "400001",
+            "location": {
+                "latitude": 13.0080097,
+                "longitude": 80.257143
+            }
+        },
+        "contact": {
+            "phone": "+0987654321"
+        },
+        "pickup_time": "2024-10-24T12:30:00Z",
+        "order_status": "Ready for Pickup"
+    },
+    "customer": {
+        "name": "John Doe",
+        "phone": "+1234567890",
+        "delivery_address": {
+            "street": "123 Main St,Ring the bell and leave the package at the door",
+            "city": "Mumbai",
+            "postal_code": "400001",
+            "location": {
+                "latitude": 13.1033397,
+                "longitude": 80.2531667
+            }
+        },
+        "delivery_instructions": "Ring the bell and leave the package at the door."
+    },
+    "order_details": {
+        "items": [
+            {
+                "name": "Margherita Pizza",
+                "quantity": 2
+            },
+            {
+                "name": "Garlic Bread",
+                "quantity": 1
+            }
+        ],
+        "total_amount": 767.47,
+        "payment_status": "Paid"
+    },
+    "delivery_agent": {
+        "agent_id": "DEL001",
+        "name": "Ravi Kumar",
+        "phone": "+9876543210"
+    }
+}
