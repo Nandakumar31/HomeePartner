@@ -8,6 +8,45 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:fa35a16e080df4116bb185",
+        "android_client_info": {
+          "package_name": "com.homeeRider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:82774553568:android:ecb85cf8cd7a66bb6bb185",
         "android_client_info": {
           "package_name": "com.homeeUser"
@@ -22,6 +61,9 @@
       "api_key": [
         {
           "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
         }
       ],
       "services": {
@@ -58,6 +100,9 @@
       "api_key": [
         {
           "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
         }
       ],
       "services": {
@@ -94,6 +139,48 @@
       "api_key": [
         {
           "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "82774553568-hevmf1hnb03jibor5gduakmqhfoer1q7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.homeeuser"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82774553568:android:75a15a914b22cfd76bb185",
+        "android_client_info": {
+          "package_name": "com.homeerider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82774553568-kee293goekqplq9tntqfmutjab8f818d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
         }
       ],
       "services": {
@@ -138,6 +225,9 @@
       "api_key": [
         {
           "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
         }
       ],
       "services": {
@@ -182,6 +272,9 @@
       "api_key": [
         {
           "current_key": "AIzaSyALap2uT5JES6Ln1Xd1bxjkNVvpcJLYmnU"
+        },
+        {
+          "current_key": "AIzaSyCJUDz_KUobAkldR78-wGvmUMMVLOBbxxE"
         }
       ],
       "services": {

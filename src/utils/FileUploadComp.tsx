@@ -27,18 +27,16 @@ const FileUploadComponent = ({ onPress, fileTittle, data, ondelete }: any) => {
             <View style={styles.fssaidoc}>
                 <Text style={{
                     color: "#707070", fontFamily: 'Poppins-Medium', fontSize: 10,
-                    marginHorizontal: 10, textAlign: 'center',marginVertical:5
-                }}>
-                    {fileTittle}
-                </Text>
+                    marginHorizontal: 10, textAlign: 'center', marginVertical: 5
+                }}>{fileTittle}</Text>
                 {data ? (
-                    <Text style={{ color: "#707070", textAlign: 'center',marginVertical:5 }}>
-                        {/* {data?.length > 10 ? `${data.slice(0, 16)}...` : data} */}
-                        {data?.length > 10 && extractFilePathFromURL(data)}
-                    </Text>
+                    <Text style={{ color: "#707070", textAlign: 'center', marginVertical: 5 }}>{data?.length > 10 && extractFilePathFromURL(data)}</Text>
 
                 ) : (
-                    <Text style={{ color: "#AEAEAE", fontFamily: 'Poppins-Medium', fontSize: 10, marginVertical: 5 }}>
+                    <Text style={{
+                        color: "#AEAEAE",
+                        fontFamily: 'Poppins-Medium', fontSize: 10, marginVertical: 5
+                    }}>
                         .doc,.pdf,.jpg
                     </Text>
                 )}
@@ -73,8 +71,6 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         borderRadius: 5,
         alignItems: "center",
-
-
     },
     button: {
         borderWidth: 1,
@@ -82,7 +78,7 @@ const styles = StyleSheet.create({
         width: 115,
         height: 28,
         padding: 5,
-        marginVertical:5
+        marginVertical: 5
     },
     txt3: {
         fontSize: 12,

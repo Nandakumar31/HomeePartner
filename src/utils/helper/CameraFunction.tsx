@@ -5,7 +5,6 @@
 
     const useImagePicker = () => {
         const dispatch = useDispatch();
-
         const openCamera = async (index:any,func:any,pics:any) => {
             const hasPermission = await requestCameraPermission(); 
             if (hasPermission) {
