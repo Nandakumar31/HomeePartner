@@ -1,7 +1,8 @@
 import { Alert, PermissionsAndroid, Platform } from "react-native";
+import messaging from '@react-native-firebase/messaging';
 import Geolocation from 'react-native-geolocation-service';
 import { useDispatch } from 'react-redux';
-import { setCurrentLocation } from '../../store/slices/ProfileSlice';
+import { setCurrentLocation, setSignedLocation } from '../../store/slices/ProfileSlice';
 
 
 export const requestLocationPermission = async () => {
@@ -54,14 +55,15 @@ export const handleGetCurrentLocation = async (dispatch: any) => {
                 console.log("Location:", latitude, longitude);
 
                 dispatch(setCurrentLocation({ latitude, longitude }));
+                dispatch(setSignedLocation({ latitude, longitude }));
             },
             (error) => {
                 console.error("Location error:", error);
                 Alert.alert("Error", `Failed to get location: ${error.message}`);
             },
             {
-                enableHighAccuracy: true, 
-                timeout: Platform.OS === 'android' ? 20000 : 15000, 
+                enableHighAccuracy: true,
+                timeout: Platform.OS === 'android' ? 20000 : 15000,
                 maximumAge: 5000
             }
         );
@@ -90,4 +92,37 @@ export const requestCameraPermission = async () => {
         }
     }
     return true; // iOS does not require manual permission handling
+};
+
+export const requestNotificationPermission = async () => {
+    if (Platform.OS === 'android' && Platform.Version >= 33) {
+        const granted = await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.POST_NOTIFICATIONS
+        );
+        if (granted !== PermissionsAndroid.RESULTS.GRANTED) {
+            Alert.alert('Permission required', 'Please enable notification permission in settings.');
+        }
+    }
+};
+
+
+export const getFCMToken = async () => {
+    try {
+        await requestNotificationPermission();
+
+        const authStatus = await messaging().requestPermission();
+        const enabled =
+            authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+            authStatus === messaging.AuthorizationStatus.PROVISIONAL;
+
+        if (enabled) {
+            const token = await messaging().getToken();
+            console.log('🔥 FCM Token:', token);
+            return token;
+        } else {
+            console.warn('🚫 Notification permission not granted');
+        }
+    } catch (err) {
+        console.error('❌ Error getting FCM token:', err);
+    }
 };

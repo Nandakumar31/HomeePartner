@@ -21,6 +21,7 @@ const ProfileRegistration = () => {
   const { openGallery, handleProfileImageUpload } = useImagePicker();
   const [openVehicle, setOpenVehicle] = useState(false);
   const [loding, setLoading] = useState(false)
+  
 
   const Profile = useSelector((state: any) => state.profile)
   console.log(Profile);
@@ -97,18 +98,18 @@ const ProfileRegistration = () => {
               data={Profile?.aadharCardFront}
               ondelete={(setLoading: (loading: boolean) => void) =>
                 deleteFile(dispatch, setAdharCardFront, 'Adhaar', Profile?.aadharCardFront, setLoading)
-              }
-            /> <FileUploadComponent onPress={(setLoading: (loading: boolean) => void) => FileUpload(dispatch, setAdharCardBack, 'Adhaar',  setLoading)}
+              } />
+            <FileUploadComponent onPress={(setLoading: (loading: boolean) => void) => FileUpload(dispatch, setAdharCardBack, 'Adhaar', setLoading)}
               fileTittle="Click to Upload Back Side Adhaar"
               data={Profile?.aadharCardBack}
               ondelete={(setLoading: (loading: boolean) => void) => deleteFile(dispatch, setAdharCardBack, 'Adhaar', Profile?.aadharCardBack, setLoading)} />
           </View>
           <View style={{ flexDirection: 'row' }}>
-            <FileUploadComponent onPress={(setLoading: (loading: boolean) => void) => FileUpload(dispatch, setDrivingLicenseFront, 'Driving License',  setLoading)}
+            <FileUploadComponent onPress={(setLoading: (loading: boolean) => void) => FileUpload(dispatch, setDrivingLicenseFront, 'Driving License', setLoading)}
               fileTittle="Click to Upload Front Side DL"
               data={Profile?.drivingLicenseFront}
               ondelete={(setLoading: (loading: boolean) => void) => deleteFile(dispatch, setDrivingLicenseFront, 'Driving License', Profile?.drivingLicenseFront, setLoading)} />
-            <FileUploadComponent onPress={(setLoading: (loading: boolean) => void) => FileUpload(dispatch, setDrivingLicenseBack, 'Driving License',  setLoading)}
+            <FileUploadComponent onPress={(setLoading: (loading: boolean) => void) => FileUpload(dispatch, setDrivingLicenseBack, 'Driving License', setLoading)}
               fileTittle="Click to Upload Back Side DL"
               data={Profile?.drivingLicenseBack}
               ondelete={(setLoading: (loading: boolean) => void) => deleteFile(dispatch, setDrivingLicenseBack, 'Driving License', Profile?.drivingLicenseBack, setLoading)} />

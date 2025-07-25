@@ -30,6 +30,7 @@ import OrderModel from "../components/OrderComponents/OrderModel";
 import OrderPendingComp from "../components/OrderComponents/OrderPendingComp";
 import { RadioButton } from "react-native-paper";
 import { sendOtp } from "../utils/sendOpt";
+import { setSignedLocation } from "../store/slices/ProfileSlice";
 
 
 
@@ -97,9 +98,9 @@ const MapScreen = () => {
         }
     }
 
-    const handleSumbit = async (status: any) => {  
+    const handleSumbit = async (status: any) => {
 
-        await sendOtp( status, orderAccepted?.OrderId)
+        await sendOtp(status, orderAccepted?.OrderId)
         // if (status == 'Arrived') {
         //     if (verification) {
         //         navigation.navigate('ItemsCheck', { verification })
@@ -153,6 +154,7 @@ const MapScreen = () => {
             (position) => {
                 const { latitude, longitude } = position.coords;
                 dispatch(setCurrentLocation({ latitude, longitude }));
+                dispatch(setSignedLocation({ latitude, longitude }));
             },
             (error) => console.error(error),
             { enableHighAccuracy: true }

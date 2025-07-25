@@ -11,7 +11,8 @@ const initialState = {
     drivingLicenseFront: '',
     drivingLicenseBack: '',
     profileStatus: false,
-    currentLocation:''
+    currentLocation: '',
+    signedLocation: ""
 
 
 }
@@ -47,10 +48,13 @@ const ProfileSlice = createSlice({
         setDrivingLicenseBack: (state, action) => {
             state.drivingLicenseBack = action.payload
         },
-        setCurrentLocation:(state,action)=>{
+        setCurrentLocation: (state, action) => {
             state.currentLocation = action.payload
+        },
+        setSignedLocation: (state, action) => {
+            state.signedLocation = action.payload
         }
-       
+
     }
 });
 
@@ -65,5 +69,6 @@ export const {
     setDrivingLicenseFront,
     setDrivingLicenseBack,
     setCurrentLocation,
+    setSignedLocation,
 } = ProfileSlice.actions;
 export default ProfileSlice.reducer

@@ -9,7 +9,7 @@ import LottieView from 'lottie-react-native';
 import DeliveryBoyGif from '../assets/Animation/Animation - 1730100581366.json'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { formatTime } from '../utils/helper/Ordersutills';
-import { handleGetCurrentLocation } from '../utils/Permissions/requestLocationPermission';
+import { getFCMToken, handleGetCurrentLocation } from '../utils/Permissions/requestLocationPermission';
 import Delivered from '../assets/Animation/Animation - 1730096842832.json'
 import colors from '../utils/color';
 import { Fonts } from '../constent/Themes';
@@ -17,6 +17,7 @@ import { setOrderDelivered } from '../store/slices/OrderSlice';
 import MapScreen from './MapScreen';
 import { useNavigation } from '@react-navigation/native';
 import { ProfileContext } from '../context/ProfileContext';
+import { SafeAreaView } from 'react-native-safe-area-context';
 // import { getDocAndActiveHours } from '../services/api.services';
 
 
@@ -54,6 +55,7 @@ const DashBoardScreen = () => {
 
 
     useEffect(() => {
+        getFCMToken()
         fetchStatus()
         getOrdersToAccept()
         getAcceptedOrders()
@@ -68,7 +70,7 @@ const DashBoardScreen = () => {
     }, [order?.orderDelivered, refresh, isOnline]);
     return (
 
-        <>
+        <SafeAreaView>
             {order?.orderDelivered ? <View style={{ flex: 1, backgroundColor: colors.primary, justifyContent: 'center' }}>
                 <LottieView
                     source={Delivered}
@@ -208,7 +210,7 @@ const DashBoardScreen = () => {
 
 
 
-        </>
+        </SafeAreaView>
 
 
     )
